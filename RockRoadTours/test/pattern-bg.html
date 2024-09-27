@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    background-color: aquamarine;
+}
+
+div {
+    position: relative;
+    overflow: hidden;
+    width:500px;
+    aspect-ratio: 1;
+    border: 1px solid;
+    display: inline-block;
+}
+
+.one {
+    background:
+        radial-gradient(circle, transparent 20%, yellow 20%, yellow 80%, transparent 80%, transparent) 0% 0% / 64px 64px,
+        radial-gradient(circle, transparent 20%, yellow 20%, yellow 80%, transparent 80%, transparent) 32px 32px / 64px 64px,
+        linear-gradient(black 2px, transparent 2px) 0px -1px / 32px 32px,
+        linear-gradient(90deg, black 2px, yellow 2px) -1px 0px / 32px 32px yellow;
+}
+
+.one::before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.two {
+    background:
+        radial-gradient(circle, transparent 20%, yellow 20%, yellow 80%, transparent 80%, transparent) 32px 32px / 64px 64px,
+        linear-gradient(black 2px, transparent 2px) 0px -1px / 32px 32px,
+        linear-gradient(90deg, black 2px, yellow 2px) -1px 0px / 32px 32px yellow;
+}
+
+.three {
+    background:
+        radial-gradient(circle, transparent 20%, yellow 20%, yellow 80%, transparent 80%, transparent) 0% 0% / 64px 64px,
+        linear-gradient(black 2px, transparent 2px) 0px -1px / 32px 32px,
+        linear-gradient(90deg, black 2px, yellow 2px) -1px 0px / 32px 32px yellow;
+}
+
+.four {
+	background:
+        radial-gradient(circle, transparent 20%, yellow 20%, yellow 80%, transparent 80%, transparent) 32px 32px / 64px 64px
+        black;
+}
+
+.five::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    background: linear-gradient(to right, yellow 5%,transparent 5% 49%, yellow 49% 51%, transparent 51% 95%, yellow 95%),
+                conic-gradient(transparent 135deg, black 135deg 225deg, transparent 225deg),
+                linear-gradient(to left top, transparent 75%, black 75%),
+                linear-gradient(to right top, transparent 75%, black 75%),
+                yellow;
+    background-size: 50px 50px;
+    transform: rotate(45deg);
+}
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+    <div class="five"></div>
+</body>
+</html>
